@@ -5,7 +5,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "TLF01_V2"
-Date "2020-08-16"
+Date "2020-08-17"
 Rev "A"
 Comp "PNPN Manufactory"
 Comment1 ""
@@ -722,31 +722,16 @@ Wire Wire Line
 Wire Wire Line
 	3300 5500 3200 5500
 $Comp
-L Connector_Generic:Conn_01x02 J2
-U 1 1 5EBFB71D
-P 1850 5250
-F 0 "J2" H 1768 5467 50  0000 C CNN
-F 1 "AUDIO_IN" H 1768 5376 50  0000 C CNN
-F 2 "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical" H 1850 5250 50  0001 C CNN
-F 3 "~" H 1850 5250 50  0001 C CNN
-	1    1850 5250
-	-1   0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR06
 U 1 1 5EC00F0C
-P 2150 5700
-F 0 "#PWR06" H 2150 5450 50  0001 C CNN
-F 1 "GND" H 2155 5527 50  0000 C CNN
-F 2 "" H 2150 5700 50  0001 C CNN
-F 3 "" H 2150 5700 50  0001 C CNN
-	1    2150 5700
+P 2200 5700
+F 0 "#PWR06" H 2200 5450 50  0001 C CNN
+F 1 "GND" H 2205 5527 50  0000 C CNN
+F 2 "" H 2200 5700 50  0001 C CNN
+F 3 "" H 2200 5700 50  0001 C CNN
+	1    2200 5700
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2050 5350 2150 5350
-Wire Wire Line
-	2150 5350 2150 5700
 $Comp
 L power:GND #PWR011
 U 1 1 5EC0A993
@@ -761,32 +746,6 @@ $EndComp
 Wire Wire Line
 	4300 7150 4300 6850
 Connection ~ 4300 6850
-$Comp
-L Connector_Generic:Conn_01x02 J6
-U 1 1 5EC28907
-P 9700 2400
-F 0 "J6" H 9780 2392 50  0000 L CNN
-F 1 "AUDIO_OUT" H 9780 2301 50  0000 L CNN
-F 2 "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical" H 9700 2400 50  0001 C CNN
-F 3 "~" H 9700 2400 50  0001 C CNN
-	1    9700 2400
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR018
-U 1 1 5EC2DE0C
-P 9400 2800
-F 0 "#PWR018" H 9400 2550 50  0001 C CNN
-F 1 "GND" H 9405 2627 50  0000 C CNN
-F 2 "" H 9400 2800 50  0001 C CNN
-F 3 "" H 9400 2800 50  0001 C CNN
-	1    9400 2800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9400 2800 9400 2500
-Wire Wire Line
-	9400 2500 9500 2500
 $Comp
 L power:+12V #PWR014
 U 1 1 5EC60FCD
@@ -1194,7 +1153,7 @@ F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7650 2500 50  0001 C CNN
 	1    7650 2500
 	1    0    0    1   
 $EndComp
-Text Notes 2000 6800 0    100  ~ 0
+Text Notes 1750 6700 0    100  ~ 0
 C&T: Cut & Try
 $Comp
 L Mechanical:MountingHole H1
@@ -1265,8 +1224,6 @@ $EndComp
 Wire Wire Line
 	2600 5650 2600 5700
 Wire Wire Line
-	2050 5250 2600 5250
-Wire Wire Line
 	2600 5250 2600 5350
 Wire Wire Line
 	2750 5500 2900 5500
@@ -1281,6 +1238,34 @@ Wire Wire Line
 Wire Wire Line
 	9350 2000 9350 2400
 Connection ~ 9350 2400
+Text GLabel 9500 2400 2    59   Output ~ 0
+Audio_Out
 Wire Wire Line
 	9350 2400 9500 2400
+$Comp
+L Connector_Generic:Conn_01x04 J2
+U 1 1 5F44F858
+P 1800 5150
+F 0 "J2" H 1718 5467 50  0000 C CNN
+F 1 "Audio_In_Out" H 1718 5376 50  0000 C CNN
+F 2 "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical" H 1800 5150 50  0001 C CNN
+F 3 "~" H 1800 5150 50  0001 C CNN
+	1    1800 5150
+	-1   0    0    -1  
+$EndComp
+Text GLabel 2100 5050 2    59   Input ~ 0
+Audio_Out
+Wire Wire Line
+	2000 5350 2200 5350
+Wire Wire Line
+	2000 5250 2600 5250
+Wire Wire Line
+	2200 5350 2200 5700
+Wire Wire Line
+	2000 5050 2100 5050
+Wire Wire Line
+	2000 5150 2200 5150
+Wire Wire Line
+	2200 5150 2200 5350
+Connection ~ 2200 5350
 $EndSCHEMATC
