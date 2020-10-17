@@ -2,8 +2,8 @@
 <export version="D">
   <design>
     <source>E:\Users\nerdfloor\Documents\Develop\TLF01_V2\KICAD\TLF01_V2\TLF01_V2.sch</source>
-    <date>2020/05/19 19:37:11</date>
-    <tool>Eeschema (5.1.4)-1</tool>
+    <date>2020/08/30 1:01:11</date>
+    <tool>Eeschema (5.1.6)-1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>TLF01_V2</title>
@@ -507,6 +507,7 @@
         <alias>TLV2372</alias>
         <alias>LT6237</alias>
         <alias>OPA2277</alias>
+        <alias>MCP6022</alias>
       </aliases>
       <description>Dual Operational Amplifiers, DIP-8/SOIC-8/TSSOP-8/VSSOP-8</description>
       <docs>http://www.ti.com/lit/ds/symlink/lm358.pdf</docs>
