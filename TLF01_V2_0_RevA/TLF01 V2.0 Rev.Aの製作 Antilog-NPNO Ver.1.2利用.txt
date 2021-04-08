@@ -1,0 +1,50 @@
+TLF01 V2.0 Rev.Aの製作 Antilog-NPNO Ver.1.2利用
+
+TLF01 V2.0の不具合を修正したRev.A製作しました。アンチ・ログ回路にはAntilog-NPNO Ver.1.2を流用しています。Antilog-NPNO Ver.1.2はSawVCOでも使用しています。
+
+TLF01 V2.0 Rev.A 回路図
+TLF01_V2_0_RevA_sch.png
+
+入力が±5V波形の場合、RV1をかなり絞らないと入力過大となるので、R3(1kΩ)の値を大きくして入力を減衰させたほうが良さそうです。
+
+Antilog-NPNO Ver.1.2 回路図
+Antilog-NPNO_TLF01_V2_0_RevA_sch.jpg
+
+TLF01用に定数を変更、実装する部品を選択しています。
+
+TLF01_V2_0_RevA
+IMG_20210406_101956.jpg
+
+Antilog-NPNO Ver.1.2
+IMG_20210406_102014.jpg
+
+パネルに取り付け
+IMG_20210406_102717.jpg
+
+※MOD1の入力ジャック(白い配線)とMOD2の入力ジャック(黄色い配線)の取り付け位置が逆。
+
+Antilog-NPNO Ver.1.2の単体テスト
+
+アンチログ回路のテスト方法です。　
+
+シミュレーション回路図
+Antilog-NPNO_TLF01_V2_0_Test_sim.png
+
+DC解析
+Antilog-NPNO_TLF01_V2_0_Test_DC.png
+
+テスト用配線
+Antilog-NPNO_TLF01_V2_0_RevA_Test_ブレッドボード.png
+
+I_Sink端子に1kΩの抵抗をつなぎ入力端の電圧を測定します。Cutoff POTを回して5V(左端)～12V(右端)程度に変化すればOKです。
+
+入出力
+
+ノコギリ波
+
+C1:SawVCO C2:TLF01_V2_RevA
+
+三角波
+
+C1:SawVCO+Saw2Tri C2:TLF01_V2_RevA
+
